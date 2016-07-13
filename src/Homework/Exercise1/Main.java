@@ -26,7 +26,7 @@ public class Main {
         System.out.println("5." + directory.getFiles() + ";");
         System.out.println("__________________________________");
 
-        codingText.caesar(directory);
+        codingText.caesar(directory.getFiles());
 
         System.out.println("Название всех классов в данной диаграмме:");
         System.out.println("1." + audio.getName() + ";");
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("5." + directory.getFiles() + ";");
         System.out.println("__________________________________");
 
-        codingText.caesarDeshifrator(directory);
+        codingText.caesarDeshifrator(directory.getFiles());
 
         System.out.println("Название всех классов в данной диаграмме:");
         System.out.println("1." + audio.getName() + ";");

@@ -1,5 +1,6 @@
 # folder
 .idea/*
+.iml/*
 out/*
 
 # class files

@@ -1,5 +1,6 @@
 package Homework.Exercise1;
 
+import java.util.Collection;
 import java.util.List;
 
 public class CodingText {
@@ -14,10 +15,10 @@ public class CodingText {
     public static final int n = 33;
     public static final int k = 3;
 
-    void caesar(Directory directory) {
+    void caesar(Collection<File> enyCollection) {
         String input;
         char[] outPutArr;
-        for (File element : directory.getFiles()) {
+        for (File element : enyCollection) {
             input = element.getName();
             outPutArr = new char[input.length()];
             for (int i = 0; i < input.length(); i++) {
@@ -38,10 +39,10 @@ public class CodingText {
         }
     }
 
-    void caesarDeshifrator(Directory directory) {
+    void caesarDeshifrator(Collection<File> enyCollection) {
         String input;
         char[] outPutArr;
-        for (File element : directory.getFiles()) {
+        for (File element : enyCollection) {
             input = element.getName();
             outPutArr = new char[input.length()];
             for (int i = 0; i < input.length(); i++) {

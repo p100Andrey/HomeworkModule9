@@ -15,35 +15,34 @@ public class CodingText {
     public static final int n = 33;
     public static final int k = 3;
 
-    void caesar(Collection<File> enyCollection) {
-        String input;
+    public String caesar(String input) {
         char[] outPutArr;
-        for (File element : enyCollection) {
-            input = element.getName();
-            outPutArr = new char[input.length()];
-            for (int i = 0; i < input.length(); i++) {
-                char c = input.charAt(i);
-                if (findIndLargeSymbol(c) != -1) {
-                    if ((findIndLargeSymbol(c) + k) < n) outPutArr[i] = largeSimvoly[findIndLargeSymbol(c) + k];
-                    else outPutArr[i] = largeSimvoly[(findIndLargeSymbol(c) + k) - n];
-                }
-                if (findIndSmallSymbol(c) != -1) {
-                    if ((findIndSmallSymbol(c) + k) < n) outPutArr[i] = smallSimbol[findIndSmallSymbol(c) + k];
-                    else outPutArr[i] = smallSimbol[(findIndSmallSymbol(c) + k) - n];
-                }
-                if (c < 'А' || c > 'я') {
-                    outPutArr[i] = c;
-                }
+//        for (File element : enyCollection) {
+//            input = element.getName();
+        outPutArr = new char[input.length()];
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            if (findIndLargeSymbol(c) != -1) {
+                if ((findIndLargeSymbol(c) + k) < n) outPutArr[i] = largeSimvoly[findIndLargeSymbol(c) + k];
+                else outPutArr[i] = largeSimvoly[(findIndLargeSymbol(c) + k) - n];
             }
-            element.setName(new String(outPutArr));
+            if (findIndSmallSymbol(c) != -1) {
+                if ((findIndSmallSymbol(c) + k) < n) outPutArr[i] = smallSimbol[findIndSmallSymbol(c) + k];
+                else outPutArr[i] = smallSimbol[(findIndSmallSymbol(c) + k) - n];
+            }
+            if (c < 'А' || c > 'я') {
+                outPutArr[i] = c;
+            }
         }
+        return new String(outPutArr);
+//                element.setName(new String(outPutArr));
+//        }
     }
 
-    void caesarDeshifrator(Collection<File> enyCollection) {
-        String input;
+    public String caesarDeshifrator(String input) {
         char[] outPutArr;
-        for (File element : enyCollection) {
-            input = element.getName();
+//        for (File element : enyCollection) {
+//            input = element.getName();
             outPutArr = new char[input.length()];
             for (int i = 0; i < input.length(); i++) {
                 char c = input.charAt(i);
@@ -52,15 +51,16 @@ public class CodingText {
                     else outPutArr[i] = largeSimvoly[(findIndLargeSymbol(c) - k) + n];
                 }
                 if (findIndSmallSymbol(c) != -1) {
-                    if ((findIndSmallSymbol(c) + k) >= 0) outPutArr[i] = smallSimbol[findIndSmallSymbol(c) - k];
+                    if ((findIndSmallSymbol(c) - k) >= 0) outPutArr[i] = smallSimbol[findIndSmallSymbol(c) - k];
                     else outPutArr[i] = smallSimbol[(findIndSmallSymbol(c) - k) + n];
                 }
                 if (c < 'А' || c > 'я') {
                     outPutArr[i] = c;
                 }
             }
-            element.setName(new String(outPutArr));
-        }
+        return new String(outPutArr);
+//            element.setName(new String(outPutArr));
+//        }
     }
 
     public static int findIndLargeSymbol(char c) {

@@ -1,6 +1,11 @@
 package Homework.Exercise2;
 
 
+import Homework.Exercise1.CodingText;
+import Homework.Exercise1.File;
+
+import java.util.Collection;
+
 public class Main {
     public static void main(String[] args) {
         Aster aster = new Aster("Цветок астра");
@@ -23,9 +28,48 @@ public class Main {
         System.out.println("5." + rosesbush.getNamesbush() + ";");
         System.out.println("6." + bouquet.getName() + ";");
         System.out.println("7." + flower.getflower() + ".");
+        System.out.println("__________________________________");
+
+        collectionCoding(bouquet.getFlowers());
+
+        System.out.println("Название всех классов в данной диаграмме:");
+        System.out.println("1." + aster.getflower() + ";");
+        System.out.println("2." + chamomile.getflower() + ";");
+        System.out.println("3." + tulip.getflower() + ";");
+        System.out.println("4." + rose.getflower() + ";");
+        System.out.println("5." + rosesbush.getNamesbush() + ";");
+        System.out.println("6." + bouquet.getName() + ";");
+        System.out.println("7." + flower.getflower() + ".");
+        System.out.println("__________________________________");
+
+        collectionDeCoding(bouquet.getFlowers());
+
+        System.out.println("Название всех классов в данной диаграмме:");
+        System.out.println("1." + aster.getflower() + ";");
+        System.out.println("2." + chamomile.getflower() + ";");
+        System.out.println("3." + tulip.getflower() + ";");
+        System.out.println("4." + rose.getflower() + ";");
+        System.out.println("5." + rosesbush.getNamesbush() + ";");
+        System.out.println("6." + bouquet.getName() + ";");
+        System.out.println("7." + flower.getflower() + ".");
+        System.out.println("__________________________________");
 
         rosesbush.bushBrand();
         rosesbush.setBushage("10 лет");
         System.out.println(rosesbush);
+    }
+
+    private static void collectionCoding(Collection<Flower> enyCollection) {
+        CodingText ct = new CodingText();
+        for (Flower flower : enyCollection) {
+            flower.setflower(ct.caesar(flower.getflower()));
+        }
+    }
+
+    private static void collectionDeCoding(Collection<Flower> enyCollection) {
+        CodingText ct = new CodingText();
+        for (Flower flower : enyCollection) {
+            flower.setflower(ct.caesarDeshifrator(flower.getflower()));
+        }
     }
 }

@@ -18,37 +18,29 @@ public class Main {
         shop.addMusicalInstrument(piano);
         shop.addMusicalInstrument(trumpet);
 
-        System.out.println("Название всех классов в данной диаграмме:");
-        System.out.println("1." + guitar.getNameinstrument() + ";");
-        System.out.println("2." + piano.getNameinstrument() + ";");
-        System.out.println("3." + trumpet.getNameinstrument() + ";");
-        System.out.println("4." + shop.getName() + ";");
-        System.out.println("5." + musicalinstrument.getNameinstrument() + ".");
-        System.out.println("__________________________________");
+        shouText(shop, guitar, piano, trumpet, musicalinstrument);
 
         collectionCoding(shop.getMusicalInstruments());
 
-        System.out.println("Название всех классов в данной диаграмме:");
-        System.out.println("1." + guitar.getNameinstrument() + ";");
-        System.out.println("2." + piano.getNameinstrument() + ";");
-        System.out.println("3." + trumpet.getNameinstrument() + ";");
-        System.out.println("4." + shop.getName() + ";");
-        System.out.println("5." + musicalinstrument.getNameinstrument() + ".");
-        System.out.println("__________________________________");
+        shouText(shop, guitar, piano, trumpet, musicalinstrument);
 
         collectionDeCoding(shop.getMusicalInstruments());
 
-        System.out.println("Название всех классов в данной диаграмме:");
-        System.out.println("1." + guitar.getNameinstrument() + ";");
-        System.out.println("2." + piano.getNameinstrument() + ";");
-        System.out.println("3." + trumpet.getNameinstrument() + ";");
-        System.out.println("4." + shop.getName() + ";");
-        System.out.println("5." + musicalinstrument.getNameinstrument() + ".");
-        System.out.println("__________________________________");
+        shouText(shop, guitar, piano, trumpet, musicalinstrument);
         musicalinstrument.price();
 
         musicalinstrument.setBrend("8:00-18:00");
         System.out.println(musicalinstrument);
+    }
+
+    private static void shouText(MusicShop shop, Guitar guitar, Piano piano, Trumpet trumpet, MusicalInstrument musicalinstrument) {
+        System.out.println("Название всех классов в данной диаграмме:");
+        System.out.println("1." + guitar.getNameinstrument() + ";");
+        System.out.println("2." + piano.getNameinstrument() + ";");
+        System.out.println("3." + trumpet.getNameinstrument() + ";");
+        System.out.println("4." + shop.getName() + ";");
+        System.out.println("5." + musicalinstrument.getNameinstrument() + ".");
+        System.out.println("__________________________________");
     }
 
     private static void collectionCoding(Collection<MusicalInstrument> enyCollection) {

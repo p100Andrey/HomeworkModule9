@@ -17,8 +17,6 @@ public class CodingText {
 
     public String caesar(String input) {
         char[] outPutArr;
-//        for (File element : enyCollection) {
-//            input = element.getName();
         outPutArr = new char[input.length()];
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
@@ -35,14 +33,10 @@ public class CodingText {
             }
         }
         return new String(outPutArr);
-//                element.setName(new String(outPutArr));
-//        }
     }
 
     public String caesarDeshifrator(String input) {
         char[] outPutArr;
-//        for (File element : enyCollection) {
-//            input = element.getName();
             outPutArr = new char[input.length()];
             for (int i = 0; i < input.length(); i++) {
                 char c = input.charAt(i);
@@ -59,8 +53,6 @@ public class CodingText {
                 }
             }
         return new String(outPutArr);
-//            element.setName(new String(outPutArr));
-//        }
     }
 
     public static int findIndLargeSymbol(char c) {

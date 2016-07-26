@@ -21,26 +21,19 @@ public class Main {
         directory.addFile(text);
         directory.addFile(image);
 
-        System.out.println("Название всех классов в данной диаграмме:");
-        System.out.println("1." + audio.getName() + ";");
-        System.out.println("2." + text.getName() + ";");
-        System.out.println("3." + image.getName() + ";");
-        System.out.println("4." + directory.getName() + ";");
-        System.out.println("5." + directory.getFiles() + ";");
-        System.out.println("__________________________________");
+        shouText(audio, text, image, directory);
 
         collectionCoding(directory.getFiles());
 
-        System.out.println("Название всех классов в данной диаграмме:");
-        System.out.println("1." + audio.getName() + ";");
-        System.out.println("2." + text.getName() + ";");
-        System.out.println("3." + image.getName() + ";");
-        System.out.println("4." + directory.getName() + ";");
-        System.out.println("5." + directory.getFiles() + ";");
-        System.out.println("__________________________________");
+        shouText(audio, text, image, directory);
 
         collectionDeCoding(directory.getFiles());
 
+        shouText(audio, text, image, directory);
+
+    }
+
+    private static void shouText(AudioFile audio, TextFile text, ImageFile image, Directory directory) {
         System.out.println("Название всех классов в данной диаграмме:");
         System.out.println("1." + audio.getName() + ";");
         System.out.println("2." + text.getName() + ";");
@@ -48,7 +41,6 @@ public class Main {
         System.out.println("4." + directory.getName() + ";");
         System.out.println("5." + directory.getFiles() + ";");
         System.out.println("__________________________________");
-
     }
 
     private static void collectionCoding(Collection<File> enyCollection) {

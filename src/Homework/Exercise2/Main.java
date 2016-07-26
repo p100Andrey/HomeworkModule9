@@ -20,43 +20,31 @@ public class Main {
         bouquet.addFlower(tulip);
         bouquet.addFlower(rose);
 
-        System.out.println("Название всех классов в данной диаграмме:");
-        System.out.println("1." + aster.getflower() + ";");
-        System.out.println("2." + chamomile.getflower() + ";");
-        System.out.println("3." + tulip.getflower() + ";");
-        System.out.println("4." + rose.getflower() + ";");
-        System.out.println("5." + rosesbush.getNamesbush() + ";");
-        System.out.println("6." + bouquet.getName() + ";");
-        System.out.println("7." + flower.getflower() + ".");
-        System.out.println("__________________________________");
+        shouText(aster, chamomile, tulip, rose, rosesbush, bouquet, flower);
 
         collectionCoding(bouquet.getFlowers());
 
-        System.out.println("Название всех классов в данной диаграмме:");
-        System.out.println("1." + aster.getflower() + ";");
-        System.out.println("2." + chamomile.getflower() + ";");
-        System.out.println("3." + tulip.getflower() + ";");
-        System.out.println("4." + rose.getflower() + ";");
-        System.out.println("5." + rosesbush.getNamesbush() + ";");
-        System.out.println("6." + bouquet.getName() + ";");
-        System.out.println("7." + flower.getflower() + ".");
-        System.out.println("__________________________________");
+        shouText(aster, chamomile, tulip, rose, rosesbush, bouquet, flower);
 
         collectionDeCoding(bouquet.getFlowers());
 
-        System.out.println("Название всех классов в данной диаграмме:");
-        System.out.println("1." + aster.getflower() + ";");
-        System.out.println("2." + chamomile.getflower() + ";");
-        System.out.println("3." + tulip.getflower() + ";");
-        System.out.println("4." + rose.getflower() + ";");
-        System.out.println("5." + rosesbush.getNamesbush() + ";");
-        System.out.println("6." + bouquet.getName() + ";");
-        System.out.println("7." + flower.getflower() + ".");
-        System.out.println("__________________________________");
+        shouText(aster, chamomile, tulip, rose, rosesbush, bouquet, flower);
 
         rosesbush.bushBrand();
         rosesbush.setBushage("10 лет");
         System.out.println(rosesbush);
+    }
+
+    private static void shouText(Aster aster, Chamomile chamomile, Tulip tulip, Rose rose, Rosebush rosesbush, BouquetOfFlowers bouquet, Flower flower) {
+        System.out.println("Название всех классов в данной диаграмме:");
+        System.out.println("1." + aster.getflower() + ";");
+        System.out.println("2." + chamomile.getflower() + ";");
+        System.out.println("3." + tulip.getflower() + ";");
+        System.out.println("4." + rose.getflower() + ";");
+        System.out.println("5." + rosesbush.getNamesbush() + ";");
+        System.out.println("6." + bouquet.getName() + ";");
+        System.out.println("7." + flower.getflower() + ".");
+        System.out.println("__________________________________");
     }
 
     private static void collectionCoding(Collection<Flower> enyCollection) {

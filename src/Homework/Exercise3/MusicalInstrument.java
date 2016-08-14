@@ -3,17 +3,7 @@ package Homework.Exercise3;
 
 public class MusicalInstrument {
 
-    private String brend;
-
-    public String getBrend() {
-        return brend;
-    }
-
-    public void setBrend(String brend) {
-        this.brend = brend;
-    }
-
-    protected String instrument;
+    public String instrument;
 
     public String getNameinstrument() {
         return instrument;
@@ -27,12 +17,8 @@ public class MusicalInstrument {
         this.instrument = name;
     }
 
-    public void price() {
-        System.out.println(instrument + ": MUSIC");
-    }
-
     @Override
     public String toString() {
-        return instrument + ", Open: " + brend;
+        return instrument;
     }
 }

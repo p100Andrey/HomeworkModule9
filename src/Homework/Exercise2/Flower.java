@@ -15,4 +15,9 @@ public class Flower {
     public Flower(String flower) {
         this.flower = flower;
     }
+
+    @Override
+    public String toString() {
+        return flower;
+    }
 }

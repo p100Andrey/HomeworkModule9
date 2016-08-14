@@ -32,8 +32,4 @@ public class MusicShop {
     public void addMusicalInstrument(MusicalInstrument instrument) {
         musicalInstruments.add(instrument);
     }
-
-    public List<MusicalInstrument> prepareInstruments(Map<String, Integer> order){
-        return null;
-    }
 }
